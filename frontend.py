@@ -70,8 +70,8 @@ try:
     # Show metrics
     col4, col5, col6 = st.columns(3)
     col6.metric("Percent Change", f"{pct:.2f}%", f"{pct:.2f}%")
-    col4.metric("High", f"{df['high'].max():.2f}")
-    col5.metric("Low", f"{df['low'].min():.2f}")
+    col4.metric("Highest", f"{df['high'].max():.2f}")
+    col5.metric("Lowest", f"{df['low'].min():.2f}")
 
     # Build candlestick + SMA chart
     fig = go.Figure(data=[go.Candlestick(
